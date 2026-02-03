@@ -15,8 +15,14 @@
                 <span class="logo-text">PK</span>
                 <span class="logo-dot"></span>
             </div>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
             <ul class="nav-menu">
                 <li><a href="#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="#cv" class="nav-link">CV</a></li>
                 <li><a href="#veille" class="nav-link">Veille</a></li>
                 <li><a href="#stages" class="nav-link">Stages</a></li>
                 <li><a href="#competences" class="nav-link">Compétences</a></li>
@@ -52,33 +58,71 @@
                     <div class="profile-decoration"></div>
                     <p class="intro-text">Je suis Piotr Kwerko, étudiant en BTS SIO SISR en 2ème année, passionné par l'informatique, surtout le système et le réseau. Je suis un grand passionné de sport, je pratique du tennis depuis quelques temps.</p>
                 </div>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Actuellement en formation, je développe mes compétences techniques en infrastructure système et réseau, avec un intérêt particulier pour la virtualisation, la sécurité informatique et l'automatisation des tâches.</p>
             </div>
         </div>
     </section>
 
-    <section id="veille" class="section section-alt">
+    <section id="cv" class="section section-alt">
+        <div class="container">
+            <h2 class="section-title" data-text="Curriculum Vitae">Curriculum Vitae</h2>
+            <div class="content-box cv-box">
+                <div class="cv-preview">
+                    <div class="cv-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3>Mon CV complet</h3>
+                    <p>Découvrez mon parcours, mes compétences et mes expériences professionnelles en détail.</p>
+                    <div class="cv-actions">
+                        <a href="images/CV Piotr KWERKO.pdf" target="_blank" class="cv-button cv-view">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                                <circle cx="12" cy="12" r="3"></circle>
+                            </svg>
+                            Visualiser
+                        </a>
+                        <a href="images/CV Piotr KWERKO.pdf" download class="cv-button cv-download">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Télécharger
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="veille" class="section">
         <div class="container">
             <h2 class="section-title" data-text="Veille Technologique">Veille Technologique</h2>
             <div class="content-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</p>
+                <p>Ma veille technologique me permet de rester à jour sur les dernières tendances et innovations dans le domaine de l'infrastructure et des systèmes.</p>
                 <div class="veille-grid">
                     <div class="veille-card">
                         <div class="card-icon">🔒</div>
                         <h3>Cybersécurité</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Suivi des nouvelles menaces, vulnérabilités et bonnes pratiques en matière de sécurité informatique.</p>
                         <div class="card-shine"></div>
                     </div>
                     <div class="veille-card">
                         <div class="card-icon">☁️</div>
                         <h3>Cloud Computing</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Évolution des technologies cloud, services AWS, Azure et solutions d'infrastructure moderne.</p>
                         <div class="card-shine"></div>
                     </div>
                     <div class="veille-card">
                         <div class="card-icon">⚙️</div>
                         <h3>DevOps</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <p>Automatisation, conteneurisation (Docker, Kubernetes) et pratiques d'intégration continue.</p>
                         <div class="card-shine"></div>
                     </div>
                 </div>
@@ -86,7 +130,7 @@
         </div>
     </section>
 
-    <section id="stages" class="section">
+    <section id="stages" class="section section-alt">
         <div class="container">
             <h2 class="section-title" data-text="Stages & Expériences">Stages & Expériences</h2>
             <div class="content-box">
@@ -94,17 +138,17 @@
                     <div class="stage-item">
                         <div class="stage-marker"></div>
                         <div class="stage-content">
-                            <h3>Stage 1</h3>
-                            <p class="stage-date">19 mai au 27 juin 2026 - Banque Populaire Grand Ouest</p>
-                            <p>Réalisation de scripts Powershell pour automatiser une tâche pour le métier de la banque.</p>
+                            <h3>Stage Banque Populaire Grand Ouest</h3>
+                            <p class="stage-date">19 mai au 27 juin 2026</p>
+                            <p>Réalisation de scripts PowerShell pour automatiser une tâche pour le métier de la banque. Amélioration des processus internes et gain de temps significatif pour les équipes.</p>
                         </div>
                     </div>
                     <div class="stage-item">
                         <div class="stage-marker"></div>
                         <div class="stage-content">
-                            <h3>Stage 2</h3>
-                            <p class="stage-date">12 janvier au 20 février 2026 - Néosoft</p>
-                            <p>Déploiement de machines virtuelles, centralisation et gestion de services, documentation technique.</p>
+                            <h3>Stage Néosoft</h3>
+                            <p class="stage-date">12 janvier au 20 février 2026</p>
+                            <p>Déploiement de machines virtuelles, centralisation et gestion de services, documentation technique complète. Expérience enrichissante en environnement professionnel.</p>
                         </div>
                     </div>
                 </div>
@@ -112,7 +156,7 @@
         </div>
     </section>
 
-    <section id="competences" class="section section-alt">
+    <section id="competences" class="section">
         <div class="container">
             <h2 class="section-title" data-text="Compétences">Compétences</h2>
             <div class="content-box">
@@ -158,11 +202,11 @@
         </div>
     </section>
 
-    <section id="contact" class="section">
+    <section id="contact" class="section section-alt">
         <div class="container">
             <h2 class="section-title" data-text="Contact">Contact</h2>
             <div class="content-box contact-box">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. N'hésitez pas à me contacter pour toute question ou opportunité.</p>
+                <p>N'hésitez pas à me contacter pour toute question, opportunité de stage ou projet collaboratif. Je suis toujours ouvert aux échanges professionnels !</p>
                 <div class="contact-info">
                     <div class="contact-item">
                         <div class="contact-icon">📧</div>

@@ -45,7 +45,7 @@ class Particle {
     }
 
     draw() {
-        ctx.fillStyle = `rgba(0, 102, 255, ${this.opacity})`;
+        ctx.fillStyle = `rgba(15, 5, 107, ${this.opacity})`;
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
         ctx.closePath();
@@ -108,11 +108,12 @@ class Particle {
 }
 
 const particlesArray = [];
-const numberOfParticles = 250;
+const numberOfParticles = window.innerWidth < 768 ? 100 : 250;
 
 function init() {
     particlesArray.length = 0;
-    for (let i = 0; i < numberOfParticles; i++) {
+    const particles = window.innerWidth < 768 ? 100 : 250;
+    for (let i = 0; i < particles; i++) {
         particlesArray.push(new Particle());
     }
 }
@@ -129,7 +130,7 @@ function connect() {
             if (distance < 120) {
                 const opacity = (1 - distance / 120) * 0.5;
                 const avgOpacity = (particlesArray[a].opacity + particlesArray[b].opacity) / 2;
-                ctx.strokeStyle = `rgba(0, 102, 255, ${opacity * avgOpacity})`;
+                ctx.strokeStyle = `rgba(15, 5, 107, ${opacity * avgOpacity})`;
                 ctx.lineWidth = 1;
                 ctx.beginPath();
                 ctx.moveTo(particlesArray[a].x, particlesArray[a].y);
@@ -150,7 +151,7 @@ function connectToMouse() {
 
         if (distance < mouse.radius) {
             const opacity = (1 - distance / mouse.radius) * 0.6;
-            ctx.strokeStyle = `rgba(0, 102, 255, ${opacity})`;
+            ctx.strokeStyle = `rgba(15, 5, 107, ${opacity})`;
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.moveTo(particlesArray[i].x, particlesArray[i].y);
@@ -178,6 +179,29 @@ animate();
 window.addEventListener('resize', () => {
     resizeCanvas();
     init();
+});
+
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('.nav-menu');
+const navLinks = document.querySelectorAll('.nav-link');
+
+menuToggle.addEventListener('click', () => {
+    menuToggle.classList.toggle('active');
+    navMenu.classList.toggle('active');
+});
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    });
+});
+
+document.addEventListener('click', (e) => {
+    if (!navMenu.contains(e.target) && !menuToggle.contains(e.target)) {
+        menuToggle.classList.remove('active');
+        navMenu.classList.remove('active');
+    }
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -242,7 +266,6 @@ document.querySelectorAll('.content-box').forEach(box => {
     });
 });
 
-const navLinks = document.querySelectorAll('.nav-link');
 const sections = document.querySelectorAll('.section');
 
 function highlightNav() {
