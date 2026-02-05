@@ -924,3 +924,40 @@ body {
         height: 30px;
     }
 }
+
+/* 1. On cache le sous-menu par défaut et on le positionne */
+.dropdown-content {
+    display: none;          /* Cache la liste */
+    position: absolute;     /* Permet de flotter au-dessus du contenu */
+    background-color: #fff; /* Fond blanc comme sur ton exemple */
+    min-width: 150px;       /* Largeur du menu */
+    box-shadow: 0px 8px 16px rgba(0,0,0,0.1); /* Ombre légère pour le relief */
+    border-radius: 5px;     /* Arrondis pour un look moderne */
+    padding: 10px 0;
+    list-style: none;
+    z-index: 100;           /* Passe au-dessus de tout le reste */
+}
+
+/* 2. L'ACTION MAGIQUE : On affiche quand on survole le parent */
+.dropdown:hover .dropdown-content {
+    display: block;         /* Le menu apparaît ! */
+}
+
+/* 3. Style des liens Stage 1 et Stage 2 */
+.dropdown-content li a {
+    color: #333;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    transition: 0.3s;
+}
+
+/* Changement de couleur au survol d'un stage */
+.dropdown-content li a:hover {
+    background-color: #f5f5f5;
+    color: #0a0a64; /* Utilise ton bleu foncé */
+}
+
+.dropdown {
+    position: relative;
+}
