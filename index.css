@@ -1144,33 +1144,38 @@ body {
     z-index: 1001;
 }
 
-.header-stage {
-    display: flex;
-    justify-content: space-between; /* Pousse les deux blocs aux extrémités */
-    align-items: center;            /* Aligne verticalement au milieu */
-    margin-bottom: 50px;            /* Espace avec la suite du contenu */
-    border-bottom: 2px solid #eee;  /* Optionnel : une petite ligne pour séparer */
-    padding-bottom: 20px;
+.header-stage-container {
+    display: flex !important;       /* Force le mode ligne */
+    justify-content: space-between; /* Pousse le bouton à l'opposé du texte */
+    align-items: center;            /* Aligne tout verticalement au centre */
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    padding: 0 10px;
+    clear: both;                    /* Nettoie les anciens flottants */
 }
 
-.header-left h2 {
-    margin-bottom: 5px;             /* Colle la date au titre */
+.header-text-group {
+    display: block !important;      /* Force le titre et la date l'un sous l'autre */
+    text-align: left !important;    /* Force l'écriture à gauche */
 }
 
-.date-stage {
-    color: #666;                    /* Gris pour la date */
-    font-size: 0.9rem;
-    margin: 0;
+.title-main {
+    margin: 0 !important;           /* Enlève les marges qui décalent tout */
+    font-size: 2rem;
+}
+
+.date-sub {
+    margin: 5px 0 0 0 !important;
+    color: #555;
+    font-size: 1.1rem;
 }
 
 .btn-entreprise {
     background-color: #3498db;
     color: white !important;
     padding: 12px 25px;
-    border-radius: 5px;
+    border-radius: 8px;
     text-decoration: none !important;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    white-space: nowrap;            /* Empêche le bouton de se couper en deux */
 }
