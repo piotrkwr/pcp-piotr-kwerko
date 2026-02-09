@@ -1072,3 +1072,48 @@ body {
         grid-template-columns: 1fr; /* 1 seule colonne sur petit écran */
     }
 }
+
+/* Le fond de la boîte (caché par défaut) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    backdrop-filter: blur(5px);
+}
+
+/* L'image à l'intérieur avec l'animation */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 80%;
+    max-height: 80vh;
+    border-radius: 10px;
+    animation: zoom 0.3s ease-out; /* L'animation de zoom */
+}
+
+@keyframes zoom {
+    from {transform: scale(0)} 
+    to {transform: scale(1)}
+}
+
+/* Le bouton fermer */
+.close-modal {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* On ajoute un curseur "loupe" sur tes images de galerie */
+.gallery-item img {
+    cursor: zoom-in;
+}
