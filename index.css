@@ -1017,3 +1017,58 @@ body {
 .doc-link:hover {
     text-decoration: underline;
 }
+
+/* Section des documents */
+.stage-docs-section {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.docs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.doc-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    background: #f8f9fa;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.doc-card i {
+    font-size: 1.5rem;
+    color: #e74c3c; /* Rouge PDF */
+}
+
+.doc-card span {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.doc-card:hover {
+    background: #007bff;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.doc-card:hover i {
+    color: white;
+}
+
+/* Adaptabilité Mobile */
+@media (max-width: 600px) {
+    .docs-grid {
+        grid-template-columns: 1fr; /* 1 seule colonne sur petit écran */
+    }
+}
