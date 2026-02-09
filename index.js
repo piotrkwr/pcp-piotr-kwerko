@@ -316,3 +316,30 @@ document.addEventListener('DOMContentLoaded', () => {
         el.style.animationDelay = `${index * 0.2}s`;
     });
 });
+
+// On récupère les éléments
+const modal = document.getElementById("imageModal");
+const modalImg = document.getElementById("imgFull");
+const captionText = document.getElementById("caption");
+const closeModal = document.querySelector(".close-modal");
+
+// On écoute le clic sur toutes les images de la galerie
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    }
+});
+
+// Fermer quand on clique sur la croix
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}
+
+// Fermer quand on clique n'importe où sur le fond noir
+modal.onclick = function(e) {
+    if (e.target !== modalImg) {
+        modal.style.display = "none";
+    }
+}
