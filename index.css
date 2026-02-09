@@ -1143,3 +1143,34 @@ body {
     cursor: pointer;
     z-index: 1001;
 }
+
+.header-stage {
+    display: flex;
+    justify-content: space-between; /* Pousse les deux blocs aux extrémités */
+    align-items: center;            /* Aligne verticalement au milieu */
+    margin-bottom: 50px;            /* Espace avec la suite du contenu */
+    border-bottom: 2px solid #eee;  /* Optionnel : une petite ligne pour séparer */
+    padding-bottom: 20px;
+}
+
+.header-left h2 {
+    margin-bottom: 5px;             /* Colle la date au titre */
+}
+
+.date-stage {
+    color: #666;                    /* Gris pour la date */
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.btn-entreprise {
+    background-color: #3498db;
+    color: white !important;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none !important;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
