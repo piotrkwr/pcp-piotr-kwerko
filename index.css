@@ -392,27 +392,30 @@ body {
     66% { transform: translate(2px, -2px); }
 }
 
+/* --- NOUVEAUX BLOCS MODERNES --- */
 .content-box {
-    background: white;
-    padding: 3rem;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.03) !important;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 2.5rem;
+    border-radius: 20px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-decoration: none !important;
+    color: white !important;
+    display: block; /* Important pour que le lien prenne toute la place */
 }
 
 .content-box:hover {
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
-    transform: translateY(-5px);
+    transform: translateY(-10px) scale(1.02);
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: #3498db !important; /* Ou ta couleur d'accent */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
 }
 
-.section-alt .content-box {
-    background: var(--bg-white);
-}
-
-.content-box p {
-    margin-bottom: 1.5rem;
-    color: var(--text-dark);
-    line-height: 1.8;
+/* On force la couleur du texte à l'intérieur */
+.content-box h3, .content-box p, .content-box li {
+    color: #ffffff !important;
+    text-decoration: none !important;
 }
 
 .profile-header {
