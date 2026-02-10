@@ -21,7 +21,7 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Rubik', Rubik, 'Montserrat', Montserrat, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Space Grotesk', Space Grotesk, 'Montserrat', Montserrat, sans-serif;
     line-height: 1.6;
     color: var(--text-dark);
     overflow-x: hidden;
