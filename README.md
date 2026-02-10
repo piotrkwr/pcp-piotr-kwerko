@@ -1,5 +1,5 @@
 # pcp-piotr-kwerko
 
-Document collaboratif !
+Présentation de mon portefeuille de compétences professionnelles, avec mes productions en formation et en entreprise
 
-please work #trigger
+
