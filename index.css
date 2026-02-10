@@ -1179,3 +1179,41 @@ body {
     text-decoration: none !important;
     white-space: nowrap;            /* Empêche le bouton de se couper en deux */
 }
+
+/* --- AMBIANCE BLEU VIOLET SOMBRE --- */
+
+body {
+    /* Dégradé fluide du bleu nuit vers le violet profond */
+    background: linear-gradient(135deg, #020205 0%, #0f056b 50%, #240b36 100%) fixed !important;
+    color: #ffffff !important;
+}
+
+/* On adapte la Navbar pour qu'elle soit incrustée */
+.navbar {
+    background: rgba(10, 10, 30, 0.7) !important;
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(138, 43, 226, 0.2); /* Touche de violet sur la bordure */
+}
+
+/* Texte de navigation en blanc */
+.nav-link, .logo {
+    color: #ffffff !important;
+}
+
+/* Pour que tes titres ressortent bien avec une lueur violette */
+h1, h2, .section-title {
+    color: #ffffff !important;
+    text-shadow: 0 0 15px rgba(138, 43, 226, 0.3);
+}
+
+/* On s'assure que les sections ne bloquent pas le dégradé du fond */
+.section {
+    background: transparent !important;
+}
+
+/* Petit bonus pour que le bouton brille sur le fond sombre */
+.btn-decouvrir, .hero-content a {
+    background: #0f056b !important; /* Ton bleu fétiche */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 20px rgba(15, 5, 107, 0.4);
+}
