@@ -155,58 +155,25 @@ body {
     width: 100%;
 }
 
-/* --- SECTION HERO --- */
+/* Trouve ta classe hero-section et vérifie ces 3 lignes */
 .hero-section {
-    position: relative;
     height: 100vh;
-    width: 100%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    overflow: hidden;
-    background-color: #0a0a0a; /* Noir profond */
-}
-
-/* Le contenu qui s'affiche par-dessus les particules */
-.hero-content {
+    align-items: center;
     position: relative;
-    z-index: 2;
-    text-align: center;
-    padding: 0 20px;
 }
 
+/* Pour le titre et le span rouge */
 .hero-title {
-    font-size: clamp(2.5rem, 10vw, 6rem);
-    font-weight: 800;
-    color: #ffffff;
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    text-transform: uppercase;
+    color: white; 
+    font-size: 5rem;
 }
 
-/* On cible spécifiquement le 2026 pour le mettre en rouge */
 .hero-title span {
     color: #ff2e2e; /* Ton rouge */
-    display: inline-block;
 }
-
-.hero-description {
-    font-size: 1.2rem;
-    color: #cccccc;
-    max-width: 600px;
-    margin: 0 auto 2rem;
-}
-
-/* Animation simple pour que ça apparaisse en douceur */
-.hero-content {
-    animation: fadeInHero 1.5s ease-out;
-}
-
-@keyframes fadeInHero {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
 .title-line {
     display: block;
     overflow: hidden;
