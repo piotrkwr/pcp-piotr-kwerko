@@ -1184,7 +1184,7 @@ body {
 
 body {
     /* Dégradé fluide du bleu nuit vers le violet profond */
-    background: linear-gradient(135deg, #020205 0%, #0f056b 50%, #240b36 100%) fixed !important;
+    background: linear-gradient(135deg, #020205 0%, #0f056b 100%, #240b36 100%) fixed !important;
     color: #ffffff !important;
 }
 
