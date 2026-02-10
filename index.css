@@ -155,24 +155,36 @@ body {
     width: 100%;
 }
 
-/* Trouve ta classe hero-section et vérifie ces 3 lignes */
+/* --- RÉPARATION HERO SECTION --- */
 .hero-section {
-    height: 100vh;
+    position: relative;
+    min-height: 100vh; /* Force la section à prendre toute la hauteur */
+    width: 100%;
+    background: #0a0a0a; /* Fond de secours */
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    overflow: hidden;
+    z-index: 1;
 }
 
-/* Pour le titre et le span rouge */
+.hero-content {
+    position: relative;
+    z-index: 10; /* Force le texte à passer DEVANT le canvas/fond */
+    text-align: center;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
 .hero-title {
-    color: white; 
-    font-size: 5rem;
+    color: #ffffff !important;
+    font-size: clamp(2rem, 8vw, 5rem);
+    display: block !important;
 }
 
 .hero-title span {
-    color: #ff2e2e; /* Ton rouge */
+    color: #ff2e2e !important; /* Ton rouge */
 }
 
 .cta-button {
