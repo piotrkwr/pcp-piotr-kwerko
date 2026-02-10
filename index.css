@@ -21,9 +21,10 @@ html {
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Rubik', Rubik, 'Montserrat', Montserrat, sans-serif;
+    font-family: 'Rubik', sans-serif !important; /* Force Rubik partout */
     line-height: 1.6;
     color: var(--text-dark);
+    background-color: var(--bg-white);
     overflow-x: hidden;
 }
 
