@@ -5,12 +5,15 @@
 }
 
 :root {
-    --bg-white: #02040a;      /* Noir spatial (fond) */
-    --bg-light: #0a0f1d;      /* Bleu nuit très sombre (blocs) */
-    --accent-color: #ff2e2e;  /* Rouge vif (boutons, icônes) */
-    --primary-color: #ffffff; /* Titres blancs */
-    --text-dark: #a0aec0;     /* Texte gris bleuté pour la lisibilité */
-    --glow-color: rgba(255, 46, 46, 0.3); /* L'aura rouge */
+    --primary-color: #ffffff;      /* Titres en blanc pur pour le contraste */
+    --secondary-color: #a0aec0;   /* Textes secondaires en gris-bleu doux */
+    --accent-color: #ff2e2e;      /* Ton ROUGE pour les points d'intérêt */
+    --accent-light: #4a5568;
+    --bg-white: #02040a;          /* FOND NOIR PROFOND */
+    --bg-light: #0a0f1d;          /* BLOCS BLEU NUIT */
+    --text-dark: #e2e8f0;         /* TEXTE PRINCIPAL CLAIR */
+    --text-light: #718096;
+    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html {
