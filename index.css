@@ -155,36 +155,44 @@ body {
     width: 100%;
 }
 
-/* --- RÉPARATION HERO SECTION --- */
 .hero-section {
     position: relative;
-    min-height: 100vh; /* Force la section à prendre toute la hauteur */
-    width: 100%;
-    background: #0a0a0a; /* Fond de secours */
+    height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    z-index: 10;
     overflow: hidden;
-    z-index: 1;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 10; /* Force le texte à passer DEVANT le canvas/fond */
     text-align: center;
-    visibility: visible !important;
-    opacity: 1 !important;
+    padding: 2rem;
+    position: relative;
+    z-index: 10;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+    background: rgba(15, 5, 107, 0.1);
+    color: var(--accent-color);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    animation: fadeInDown 0.8s ease-out;
 }
 
 .hero-title {
-    color: #ffffff !important;
-    font-size: clamp(2rem, 8vw, 5rem);
-    display: block !important;
-}
-
-.hero-title span {
-    color: #ff2e2e !important; /* Ton rouge */
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    letter-spacing: -2px;
+    line-height: 1.1;
 }
 
 .cta-button {
