@@ -5,15 +5,12 @@
 }
 
 :root {
-    --primary-color: #000;
-    --secondary-color: #666;
-    --accent-color: #0f056b;
-    --accent-light: #130c4d;
-    --bg-white: #ffffff;
-    --bg-light: #f8f9fa;
-    --text-dark: #1a1a1a;
-    --text-light: #666;
-    --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --bg-white: #02040a;      /* Noir spatial (fond) */
+    --bg-light: #0a0f1d;      /* Bleu nuit très sombre (blocs) */
+    --accent-color: #ff2e2e;  /* Rouge vif (boutons, icônes) */
+    --primary-color: #ffffff; /* Titres blancs */
+    --text-dark: #a0aec0;     /* Texte gris bleuté pour la lisibilité */
+    --glow-color: rgba(255, 46, 46, 0.3); /* L'aura rouge */
 }
 
 html {
