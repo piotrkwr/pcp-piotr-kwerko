@@ -1185,3 +1185,35 @@ body {
     text-decoration: none !important;
     white-space: nowrap;            /* Empêche le bouton de se couper en deux */
 }
+
+.stage-header {
+    display: flex;
+    justify-content: space-between; /* Aligne le texte à gauche et le logo à droite */
+    align-items: center;           /* Centre verticalement le logo par rapport au texte */
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom: 20px;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column; /* Garde le titre au-dessus de la date */
+}
+
+.company-logo {
+    max-height: 80px;  /* Ajuste la hauteur selon tes besoins */
+    width: auto;       /* Garde les proportions du logo */
+    border-radius: 5px; /* Optionnel : arrondit un peu les bords du logo */
+}
+
+/* Version mobile : on empile si l'écran est petit */
+@media (max-width: 600px) {
+    .stage-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .company-logo {
+        margin-top: 20px;
+        max-height: 60px;
+    }
+}
