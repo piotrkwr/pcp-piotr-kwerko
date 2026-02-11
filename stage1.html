@@ -1,98 +1,37 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stage Banque Populaire - Piotr Kwerko</title>
-    <link rel="stylesheet" href="index.css">
-    <link rel="icon" type="image/png" href="images/logo1_pk.png">
-    <link href="https://fonts.googleapis.com/css2?family=Quantico:ital,wght@0,400;0,700;1,400;1,700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
-</head>
-<body class="stage-details-page">
-    <canvas id="particleCanvas"></canvas>
-
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo-link" style="text-decoration: none;">
-                <div class="logo">
-                    <span class="logo-text">PK</span>
-                    <span class="logo-dot"></span>
+<section class="section stage-detail-container">
+    <div class="container">
+        <div class="content-box stage-card-highlight" style="background: #ffffff !important; color: #000000 !important; padding: 40px; border-radius: 15px;">
+            
+            <div class="header-stage-container" style="margin-bottom: 40px; border-bottom: 20px; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px;">
+                <div class="header-text-group">
+                    <h2 class="title-main" style="color: #000000 !important; font-size: 2.8rem; margin-bottom: 10px;">Stage Banque Populaire</h2>
+                    <p class="date-sub" style="color: #666666 !important; font-size: 1.2rem;">19 mai au 27 juin 2025</p>
                 </div>
-            </a>
-            <button class="menu-toggle" aria-label="Toggle menu">
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-                <span class="hamburger"></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
-                <li><a href="index.html#cv" class="nav-link">CV</a></li>
-                <li><a href="index.html#veille" class="nav-link">Veille</a></li>
-                <li class="dropdown">
-                    <a href="index.html#stages" class="nav-link dropbtn active">Stages</a>
-                    <ul class="dropdown-content">
-                        <li><a href="stage1.html">Stage 1</a></li>
-                        <li><a href="stage2.html">Stage 2</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#ap" class="nav-link dropbtn">Projets en AP</a>
-                    <ul class="dropdown-content">
-                        <li><a href="ap1.html">AP 1</a></li>
-                        <li><a href="ap2.html">AP 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
-                <li><a href="index.html#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
-
-   <div class="header-stage-container" style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 40px; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px;">
-    <div class="header-text-group">
-        <h2 class="title-main" style="color: #000000 !important; font-size: 2.8rem; margin: 0;">Stage Banque Populaire</h2>
-        <p class="date-sub" style="color: #666666 !important; font-size: 1.2rem; margin-top: 5px;">19 mai au 27 juin 2025</p>
-    </div>
-    
-    <a href="https://www.banquepopulaire.fr/bpgo/" target="_blank" title="Visiter le site de Banque Populaire" style="transition: transform 0.3s ease; display: inline-block;">
-        <img src="images/logo_banque_populaire.png" alt="Logo Banque Populaire" style="max-height: 80px; width: auto; cursor: pointer;">
-    </a>
-</div>
+                <img src="images/logo_banque_populaire.png" alt="Logo Banque Populaire" class="company-logo">
+            </div>
 
             <div class="stage-full-description">
-                <h3 style="color: #0f056b; margin-bottom: 15px;">Mission :</h3>
-                <p style="line-height: 1.8; font-size: 1.1rem; margin-bottom: 20px; color: #000000;">
+                <h3 style="color: #0f056b !important; margin-bottom: 15px;">Mission :</h3>
+                <p style="color: #000000 !important; line-height: 1.6; font-size: 1.1rem;">
                     Au cours de ce stage, j'ai été intégré en tant que stagiaire à la Direction Projets & Solutions, au sein du Département Technologie, afin de réaliser un script PowerShell pour un besoin d'automatisation d'une tâche pour un métier de la banque demandé par l'entreprise.
                 </p>
                 
-                <ul class="skills-list-detail" style="list-style: none; padding-left: 0; color: #000000;">
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                        <span style="color: #0f056b; margin-right: 10px;">▹</span>
-                        <span><strong>Automatisation :</strong> Création de scripts PowerShell complexes pour le traitement de données bancaires.</span>
-                    </li>
-                    <li style="margin-bottom: 15px; display: flex; align-items: flex-start;">
-                        <span style="color: #0f056b; margin-right: 10px;">▹</span>
-                        <span><strong>Optimisation :</strong> Réduction du temps de traitement manuel des tâches redondantes.</span>
-                    </li>
+                <ul class="skills-list-detail" style="list-style: none; padding-left: 0; margin-top: 20px;">
+                    <li style="margin-bottom: 10px; color: #000000 !important;"><strong>• Automatisation :</strong> Création de scripts PowerShell complexes.</li>
+                    <li style="margin-bottom: 10px; color: #000000 !important;"><strong>• Optimisation :</strong> Réduction du temps de traitement manuel.</li>
                 </ul>
 
                 <div class="stage-gallery" style="margin-top: 50px;">
-                    <h3 style="color: #0f056b; margin-bottom: 20px;">Réalisations professionnelles</h3>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <a href="images/scripts-realises.pdf" class="doc-card" target="_blank" style="text-decoration: none; display: block; max-width: 700px; margin: 0 auto;">
-                                <div style="position: relative; overflow: hidden; border-radius: 10px; border: 1px solid rgba(0,0,0,0.1);">
-                                    <img src="images/apercu-script.png" alt="Code PowerShell" style="width: 100%; height: auto; display: block;">
-                                </div>
-                                <p style="margin-top: 15px; text-align: center; color: #000000; font-size: 1.1rem;">
-                                    <strong><u>Voir les scripts réalisés durant mon stage (PDF)</u></strong>
-                                </p>
-                            </a>
-                        </div>
+                    <h3 style="color: #0f056b !important;">Réalisations professionnelles</h3>
+                    <div class="gallery-grid" style="margin-top: 20px;">
+                        <a href="images/scripts-realises.pdf" target="_blank" style="text-decoration: none;">
+                            <img src="images/apercu-script.png" alt="Code PowerShell" style="width: 100%; max-width: 500px; border-radius: 10px; border: 1px solid #ddd;">
+                            <p style="color: #000000 !important; margin-top: 10px; font-weight: bold; text-decoration: underline;">Voir les scripts réalisés durant mon stage (PDF)</p>
+                        </a>
                     </div>
                 </div>
 
-                   <div class="stage-docs-section" style="margin-top: 50px;">
+                <div class="stage-docs-section" style="margin-top: 50px;">
                     <h3 style="color: #0f056b !important; margin-bottom: 25px;">Comptes-rendus d'activités</h3>
                     
                     <div class="docs-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -124,21 +63,10 @@
                     </div>
                 </div>
 
-
-                    <div class="hero-cta" style="margin-top: 60px; text-align: center; padding-bottom: 40px;">
-                        <a href="index.html" class="cta-button" style="padding: 15px 30px; background: var(--accent-color); color: white; text-decoration: none; border-radius: 30px; font-weight: bold; border: 1px solid rgba(255,255,255,0.2);">← Retour à l'accueil</a>
-                    </div>
+                <div class="hero-cta" style="margin-top: 50px; text-align: center;">
+                    <a href="index.html" class="cta-button" style="background: #0f056b; color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none;">← Retour à l'accueil</a>
                 </div>
             </div>
         </div>
-    </section>
-
-    <footer class="footer">
-        <div class="footer-content">
-            <p>&copy; 2026 Piotr Kwerko - BTS SIO SISR</p>
-        </div>
-    </footer>
-
-    <script src="index.js"></script>
-</body>
-</html>
+    </div>
+</section>
