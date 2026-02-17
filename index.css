@@ -1258,8 +1258,12 @@ footer a:hover {
     padding: 20px 40px;
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: flex-end; /* Aligne le bouton à droite */
+    box-sizing: border-box;
 }
 
 .btn-retour {
@@ -1267,14 +1271,11 @@ footer a:hover {
     text-decoration: none;
     font-family: 'Tektur', sans-serif;
     font-size: 1rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
     position: relative;
     padding-bottom: 5px;
 }
 
-/* La ligne d'animation */
+/* L'animation de soulignement comme dans ta vidéo */
 .btn-retour::after {
     content: '';
     position: absolute;
@@ -1282,7 +1283,7 @@ footer a:hover {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0077b5; /* Bleu LinkedIn */
+    background-color: #0077b5;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
@@ -1291,8 +1292,4 @@ footer a:hover {
 .btn-retour:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
-}
-
-.btn-retour i {
-    font-size: 0.9rem;
 }
