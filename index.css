@@ -1286,7 +1286,7 @@ footer a:hover {
     display: inline-block;
     width: 8px;
     height: 8px;
-    background-color: #0077b5;
+    background-color: #0f056b;
     border-radius: 50%;
     margin-left: 4px;
 }
@@ -1295,7 +1295,7 @@ footer a:hover {
 .btn-retour {
     color: #000; /* Texte noir sur fond blanc */
     text-decoration: none;
-    font-family: 'Tektur', sans-serif;
+    font-family: 'Quantico', sans-serif;
     font-size: 1rem;
     position: relative;
     padding-bottom: 5px;
@@ -1308,7 +1308,7 @@ footer a:hover {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #0077b5;
+    background-color: #0f056b;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
