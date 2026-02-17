@@ -1317,11 +1317,24 @@ footer a:hover {
     transform-origin: bottom left;
 }
 
-.content-box {
+/* Ajoute ça dans ton bloc <style> */
+.mentions-container {
+    max-width: 900px;
+    margin: 120px auto 60px;
+    padding: 40px;
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    font-family: 'Quantico', sans-serif;
+    color: #333;
+    line-height: 1.6;
+
+    /* AJOUT ICI POUR L'ANIMATION */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.content-box:hover {
-    transform: translateY(-10px); /* La boîte monte */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Ombre noire standard plus profonde */
+/* L'EFFET AU SURVOL */
+.mentions-container:hover {
+    transform: translateY(-10px); /* La carte monte */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* L'ombre devient plus profonde */
 }
