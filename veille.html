@@ -7,84 +7,110 @@
     
     <link rel="stylesheet" href="index.css">
     <link rel="icon" type="image/png" href="images/logo1_pk.png">
+    
     <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
     
     <style>
-        body { margin: 0; padding: 0; background-color: #000; }
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #333;
+            overflow-x: hidden;
+        }
 
         #particleCanvas {
             position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             z-index: -1;
         }
 
+        /* Container avec l'animation de soulèvement */
         .veille-container {
-            max-width: 950px;
+            max-width: 1000px;
             margin: 140px auto 80px;
-            padding: 40px;
+            padding: 45px;
             background: #ffffff;
             border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
             font-family: 'Quantico', sans-serif;
-            color: #333;
-            line-height: 1.6;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            line-height: 1.7;
             position: relative;
             z-index: 1;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
         .veille-container:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
         }
 
+        /* Badge Date */
         .badge-date {
             display: inline-block;
             background: #f0f7ff;
             color: #0f056b;
-            padding: 6px 16px;
-            border-radius: 20px;
+            padding: 7px 18px;
+            border-radius: 25px;
             font-size: 0.85rem;
             font-weight: bold;
             margin-bottom: 25px;
             border: 1px solid #0f056b;
         }
 
-        h1, h2, h4 { font-family: 'Tektur', sans-serif; color: #000; }
-        h1 { border-bottom: 3px solid #0f056b; padding-bottom: 10px; margin-bottom: 30px; }
-        h2 { color: #0f056b; margin-top: 40px; }
+        h1, h2, h3, h4 { font-family: 'Tektur', sans-serif; color: #000; }
+        h1 { border-bottom: 4px solid #0f056b; padding-bottom: 10px; margin-bottom: 35px; font-size: 2.2rem; }
+        h2 { color: #0f056b; margin-top: 45px; border-left: 5px solid #0f056b; padding-left: 15px; }
+        
+        strong { color: #000; }
 
+        /* Grille des outils */
         .outil-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin: 25px 0;
+            margin: 30px 0;
         }
         .outil-card {
-            background: #f9f9f9;
-            padding: 20px;
+            background: #f8f9fa;
+            padding: 25px;
             border-radius: 12px;
             text-align: center;
             border: 1px solid #eee;
+            transition: 0.3s;
         }
-        .outil-icon {
-            font-size: 2rem;
-            margin-bottom: 10px;
-            display: block;
-        }
+        .outil-card:hover { border-color: #0f056b; background: #fff; }
+        .outil-icon { font-size: 2.2rem; display: block; margin-bottom: 12px; }
 
+        /* Articles */
+        .article-feed { margin-top: 30px; }
         .article-item {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 20px;
-            padding: 15px;
+            padding: 20px;
             border-bottom: 1px solid #eee;
             text-decoration: none;
             color: inherit;
             transition: 0.2s;
         }
-        .article-item:hover { background: #f0f7ff; border-radius: 10px; }
-        .article-date { font-weight: bold; color: #0f056b; min-width: 90px; }
+        .article-item:hover { background: #f0f7ff; border-radius: 10px; transform: scale(1.01); }
+        .article-date { font-weight: bold; color: #0f056b; min-width: 100px; font-size: 0.9rem; }
+        .article-content h4 { margin: 0 0 5px 0; font-size: 1.1rem; }
+        .article-content p { margin: 0; font-size: 0.95rem; color: #555; }
+
+        /* Note de synthèse */
+        .note-jury {
+            margin-top: 40px;
+            padding: 20px;
+            background: #f0f7ff;
+            border-radius: 10px;
+            border: 1px dashed #0f056b;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
@@ -122,39 +148,68 @@
     </nav>
 
     <div class="veille-container">
-        <div class="badge-date">● Session 2024 - 2026</div>
-        <h1>Veille Technologique</h1>
+        <div class="badge-date">● Session BTS SIO 2024 - 2026</div>
+        <h1>Veille Technologique & Réglementaire</h1>
         
-        <p>Ma veille technologique porte sur les enjeux de la <strong>Cybersécurité</strong> et des <strong>infrastructures cloud</strong>, thématiques majeures du parcours SISR.</p>
+        <p>La veille technologique est une activité essentielle pour un administrateur <strong>SISR</strong>. Elle permet d'anticiper les évolutions du marché, de prévenir les cybermenaces et de maintenir une infrastructure performante et sécurisée.</p>
 
-        <h2>Mes Outils de Veille</h2>
+        <h2>1. Thématique : Cyber-résilience et Zero Trust</h2>
+        <p>
+            Ma veille se concentre sur le passage de la protection périmétrique classique vers un modèle <strong>Zero Trust</strong> ("ne jamais faire confiance, toujours vérifier"). 
+            L'enjeu actuel est la <strong>Cyber-résilience</strong> : assurer la continuité d'activité même en cas de compromission du système.
+        </p>
+        <ul>
+            <li><strong>Micro-segmentation :</strong> Cloisonnement des réseaux pour stopper les mouvements latéraux des attaquants.</li>
+            <li><strong>Authentification forte :</strong> Déploiement du MFA et transition vers les Passkeys.</li>
+            <li><strong>Sauvegardes Immuables :</strong> Protection des données contre le chiffrement par ransomware.</li>
+        </ul>
+
+        <h2>2. Méthodologie et Outils</h2>
         <div class="outil-grid">
-            <div class="outil-card"><span class="outil-icon">📰</span>Feedly</div>
-            <div class="outil-card"><span class="outil-icon">🛡️</span>ANSSI</div>
-            <div class="outil-card"><span class="outil-icon">💬</span>Reddit IT</div>
-            <div class="outil-card"><span class="outil-icon">💻</span>IT-Connect</div>
+            <div class="outil-card"><span class="outil-icon">📰</span><strong>Feedly</strong><br>Agrégateur de flux RSS pour centraliser l'actualité IT.</div>
+            <div class="outil-card"><span class="outil-icon">🛡️</span><strong>CERT-FR</strong><br>Veille critique de l'ANSSI sur les vulnérabilités majeures.</div>
+            <div class="outil-card"><span class="outil-icon">💬</span><strong>Communautés</strong><br>Échanges techniques sur Reddit (r/sysadmin) et Discord.</div>
+            <div class="outil-card"><span class="outil-icon">📺</span><strong>IT-Connect</strong><br>Suivi de tutoriels et tests de nouvelles solutions système.</div>
         </div>
 
-        <h2>Articles & Flux suivis</h2>
+        <h2>3. Synthèse des Sujets suivis</h2>
         <div class="article-feed">
             <a href="https://www.it-connect.fr" target="_blank" class="article-item">
-                <span class="article-date">15/02/2026</span>
-                <div>
-                    <h4>Sécurisation Active Directory</h4>
-                    <p>Nouvelles méthodes de protection des identités hybrides.</p>
+                <div class="article-date">Fév 2026</div>
+                <div class="article-content">
+                    <h4>Impact de l'IA sur la Cybersécurité</h4>
+                    <p>Analyse de l'utilisation de l'IA générative pour le phishing ciblé et les réponses automatisées des EDR.</p>
                 </div>
             </a>
             <a href="#" class="article-item">
-                <span class="article-date">08/02/2026</span>
-                <div>
-                    <h4>Impact du Wi-Fi 7</h4>
-                    <p>Analyse des performances pour les infrastructures critiques.</p>
+                <div class="article-date">Jan 2026</div>
+                <div class="article-content">
+                    <h4>Fin du support Windows 10</h4>
+                    <p>Gestion du cycle de vie des terminaux et enjeux de migration vers Windows 11 en environnement pro.</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-date">Déc 2025</div>
+                <div class="article-content">
+                    <h4>Alternative à VMware : Proxmox</h4>
+                    <p>Étude de faisabilité pour la migration de clusters de virtualisation vers des solutions Open Source.</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-date">Nov 2025</div>
+                <div class="article-content">
+                    <h4>Directive Européenne NIS 2</h4>
+                    <p>Veille réglementaire sur les nouvelles obligations de sécurité pour les prestataires de services informatiques.</p>
                 </div>
             </a>
         </div>
+
+        <div class="note-jury">
+            <strong>Note pour le jury :</strong> Ma veille est organisée de manière hebdomadaire. Les informations collectées sont synthétisées pour orienter mes choix techniques lors des projets en autonomie (AP).
+        </div>
     </div>
 
-    <footer class="footer" style="background-color: #000000; color: #ffffff; padding: 20px 40px; font-family: 'Quantico', sans-serif;">
+    <footer class="footer" style="background-color: #000000; color: #ffffff; padding: 25px 40px; font-family: 'Quantico', sans-serif; border-top: 1px solid #333;">
         <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
             <div style="flex: 1; text-align: left;">
                 <p style="margin: 0;">&copy; 2026 Piotr Kwerko - BTS SIO SISR</p>
