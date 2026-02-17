@@ -1339,43 +1339,59 @@ footer a:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* L'ombre devient plus profonde */
 }
 
-/* --- SECTION VEILLE PREVIEW (INDEX) --- */
+/* --- Correction visuelle pour la section Veille --- */
 
 #veille-preview {
-    padding: 100px 0;
-}
-
-/* Style pour la carte de présentation de la veille */
-/* On s'assure que la carte ressort bien sur ton fond noir à particules */
-.veille-preview-card {
-    background: #ffffff !important; /* Force le fond blanc */
-    border-radius: 20px;
-    padding: 40px;
-    max-width: 800px;
-    margin: 0 auto;
-    border-bottom: 6px solid #0f056b;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.8);
     position: relative;
-    z-index: 99; /* Pour passer au-dessus des particules */
+    z-index: 2; /* Pour passer devant le fond de particules */
+    padding: 100px 0;
+    display: block !important; /* Force l'affichage */
 }
 
+/* Style de la carte blanche comme sur ton image */
+.veille-preview-card {
+    background: #ffffff !important;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+    border-bottom: 8px solid #0f056b; /* Liseré bleu foncé en bas */
+    transition: transform 0.3s ease;
+}
+
+.veille-preview-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Tags stylisés */
 .tag {
-    background: #f0f7ff;
+    display: inline-block;
+    border: 1.5px solid #0f056b;
     color: #0f056b;
     padding: 5px 15px;
     border-radius: 20px;
-    font-size: 0.9rem;
     font-weight: bold;
-    border: 1px solid #0f056b;
+    font-size: 0.9rem;
+    margin: 5px;
 }
 
+/* Bouton bleu foncé identique à ton image */
 .btn-veille {
     display: inline-block;
     background: #0f056b;
-    color: #fff !important;
-    padding: 12px 30px;
-    border-radius: 8px;
+    color: #ffffff !important;
+    padding: 15px 35px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    font-family: 'Tektur', sans-serif;
+    margin-top: 25px;
     transition: 0.3s;
+}
+
+.btn-veille:hover {
+    background: #000;
+    transform: scale(1.05);
 }
