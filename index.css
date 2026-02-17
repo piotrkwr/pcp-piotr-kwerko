@@ -1345,44 +1345,6 @@ footer a:hover {
     padding: 100px 0;
 }
 
-.veille-preview-card {
-    background: #ffffff;
-    border-radius: 20px;
-    padding: 50px;
-    max-width: 850px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
-}
-
-.veille-preview-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 25px 60px rgba(15, 5, 107, 0.4); /* Halo bleu au survol */
-}
-
-.preview-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-
-.preview-header span {
-    font-size: 2.5rem;
-}
-
-.preview-header h3 {
-    margin: 0;
-    font-family: 'Tektur', sans-serif;
-    color: #0f056b;
-    font-size: 1.8rem;
-}
-
 /* Style pour la carte de présentation de la veille */
 .veille-preview-card {
     background: #ffffff;
