@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veille Technologique - Piotr Kwerko</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="images/logo1_pk.png">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    <style>
+        .veille-container {
+            max-width: 1000px;
+            margin: 120px auto 60px;
+            padding: 40px;
+            background: #ffffff;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            font-family: 'Quantico', sans-serif;
+            color: #333;
+            line-height: 1.6;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .veille-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .badge-date {
+            display: inline-block;
+            background: #f0f7ff;
+            color: #0f056b;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            border: 1px solid #0f056b;
+        }
+
+        h1, h2 { font-family: 'Tektur', sans-serif; color: #000; }
+        h1 { border-bottom: 3px solid #0f056b; padding-bottom: 10px; }
+        h2 { color: #0f056b; margin-top: 40px; border-left: 5px solid #0f056b; padding-left: 15px; }
+        
+        /* Grille des outils */
+        .outil-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+        .outil-card {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            border-bottom: 3px solid #eee;
+            transition: 0.3s;
+        }
+        .outil-card:hover { border-bottom-color: #0f056b; background: #fff; }
+        .outil-card i { font-size: 2rem; color: #0f056b; margin-bottom: 10px; }
+
+        /* Articles récents */
+        .article-feed { margin-top: 30px; }
+        .article-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+            text-decoration: none;
+            color: inherit;
+            transition: 0.2s;
+        }
+        .article-item:hover { background: #f0f7ff; border-radius: 8px; }
+        .article-date { font-weight: bold; color: #0f056b; min-width: 100px; }
+        .article-content h4 { margin: 0 0 5px 0; color: #000; }
+        .article-content p { margin: 0; font-size: 0.95rem; color: #666; }
+    </style>
+</head>
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" style="text-decoration: none;">
+                <div class="logo">
+                    <span class="logo-text">PK</span>
+                    <span class="logo-dot"></span>
+                </div>
+            </a>
+            <button class="menu-toggle" aria-label="Toggle menu">
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="index.html#cv" class="nav-link">CV</a></li>
+                <li class="dropdown">
+                    <a href="index.html#stages" class="nav-link dropbtn">Stages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="stage1.html">Stage 1</a></li>
+                        <li><a href="stage2.html">Stage 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#ap" class="nav-link dropbtn">Projets en AP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ap1.html">AP 1</a></li>
+                        <li><a href="ap2.html">AP 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="veille.html" class="nav-link active">Veille</a></li>
+                <li><a href="index.html#competences" class="nav-link">Compétences</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="veille-container">
+        <div class="badge-date">● Session BTS SIO 2026</div>
+        <h1>Veille Technologique</h1>
+        
+        <p>Ma veille technologique se concentre sur les enjeux de la <strong>cybersécurité</strong> et des <strong>infrastructures hybrides</strong>, des thématiques au cœur du parcours SISR.</p>
+
+        <h2>1. Thématique : Le modèle Zero Trust</h2>
+        <p>Le concept de "Zero Trust" (ne jamais faire confiance, toujours vérifier) redéfinit la sécurité périmétrique traditionnelle. Je suis l'évolution des outils de micro-segmentation et d'authentification multi-facteurs (MFA).</p>
+
+        <h2>2. Méthodologie et Outils</h2>
+        <div class="outil-grid">
+            <div class="outil-card"><i class="fas fa-rss"></i><br>Feedly</div>
+            <div class="outil-card"><i class="fab fa-reddit-alien"></i><br>r/sysadmin</div>
+            <div class="outil-card"><i class="fas fa-user-shield"></i><br>ANSSI</div>
+            <div class="outil-card"><i class="fas fa-laptop-code"></i><br>IT-Connect</div>
+        </div>
+
+        <h2>3. Articles & Flux récents</h2>
+        <div class="article-feed">
+            <a href="https://www.it-connect.fr" target="_blank" class="article-item">
+                <div class="article-date">15 Fév 2026</div>
+                <div class="article-content">
+                    <h4>Sécurisation des environnements Active Directory</h4>
+                    <p>Analyse des nouvelles méthodes de protection contre les attaques par "Pass-the-Hash".</p>
+                </div>
+            </a>
+            <a href="#" class="article-item">
+                <div class="article-date">10 Fév 2026</div>
+                <div class="article-content">
+                    <h4>Wi-Fi 7 : Déploiement en entreprise</h4>
+                    <p>Étude sur l'amélioration du débit et de la latence dans les parcs informatiques haute densité.</p>
+                </div>
+            </a>
+            <a href="https://www.ssi.gouv.fr" target="_blank" class="article-item">
+                <div class="article-date">02 Fév 2026</div>
+                <div class="article-content">
+                    <h4>Alertes Cyber ANSSI</h4>
+                    <p>Suivi des vulnérabilités critiques sur les systèmes Linux et correctifs associés.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer" style="background-color: #000; color: #fff; padding: 30px; text-align: center; font-family: 'Quantico', sans-serif;">
+        <p>&copy; 2026 Piotr Kwerko - BTS SIO SISR</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
