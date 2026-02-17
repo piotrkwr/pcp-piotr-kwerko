@@ -1237,3 +1237,18 @@ body {
     filter: brightness(1.2);
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
 }
+
+/* Force la couleur blanche pour le lien "Retour en haut" */
+footer a, 
+footer a:visited, 
+footer a:hover, 
+footer a:active {
+    color: #ffffff !important;
+    text-decoration: none;
+}
+
+/* Optionnel : petit effet au survol pour savoir qu'on peut cliquer */
+footer a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
