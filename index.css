@@ -1339,16 +1339,19 @@ footer a:hover {
     box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* L'ombre devient plus profonde */
 }
 
-/* --- SECTION VEILLE TECHNO (INDEX) --- */
+/* ============================================================
+   SECTION VEILLE TECHNO - DESIGN COMPLET & ANIMATIONS
+   ============================================================ */
 
+/* Conteneur principal de la section */
 #veille-preview {
-    padding: 120px 0 !important; /* Gros espacement entre les sections */
+    padding: 120px 0 !important;
     display: block !important;
     position: relative;
     z-index: 10;
 }
 
-/* Titre identique à tes captures */
+/* Titre de section (Style "Compétences") */
 #veille-preview .section-title {
     font-family: 'Tektur', sans-serif;
     font-size: 3.5rem;
@@ -1358,7 +1361,7 @@ footer a:hover {
     text-transform: none;
 }
 
-/* La carte blanche avec l'ombre portée de tes images */
+/* La Carte Blanche */
 .veille-preview-card {
     background: #ffffff !important;
     border-radius: 25px;
@@ -1366,11 +1369,19 @@ footer a:hover {
     max-width: 900px;
     margin: 0 auto;
     text-align: center;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15); /* Ombre douce */
-    border-bottom: 10px solid #0f056b; /* Liseré bleu nuit épais */
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    border-bottom: 10px solid #0f056b;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    cursor: default;
 }
 
-/* Titre interne (Zero Trust...) */
+/* Animation de la carte au survol */
+.veille-preview-card:hover {
+    transform: translateY(-15px) scale(1.01);
+    box-shadow: 0 35px 80px rgba(15, 5, 107, 0.25);
+}
+
+/* Titre Interne (Zero Trust...) */
 .preview-header h3 {
     font-family: 'Tektur', sans-serif;
     color: #0f056b;
@@ -1378,7 +1389,7 @@ footer a:hover {
     margin: 20px 0;
 }
 
-/* Texte de description */
+/* Paragraphe de description */
 .veille-preview-card p {
     color: #333;
     font-size: 1.1rem;
@@ -1387,7 +1398,7 @@ footer a:hover {
     margin: 0 auto 30px;
 }
 
-/* Tags arrondis comme sur image_2f719f.png */
+/* Conteneur des Tags */
 .topics-tags {
     display: flex;
     justify-content: center;
@@ -1395,6 +1406,7 @@ footer a:hover {
     margin-bottom: 40px;
 }
 
+/* Style des Tags et Animation */
 .tag {
     border: 1.5px solid #0f056b;
     color: #0f056b;
@@ -1403,12 +1415,19 @@ footer a:hover {
     font-weight: bold;
     font-size: 0.9rem;
     background: transparent;
+    transition: all 0.3s ease;
 }
 
-/* Le bouton bleu nuit identique à tes captures */
+.tag:hover {
+    background: #0f056b;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Bouton Bleu Nuit et Animation */
 .btn-veille {
     display: inline-block;
-    background: #0f056b !important; /* Bleu nuit très foncé */
+    background: #0f056b !important;
     color: #ffffff !important;
     padding: 18px 45px;
     border-radius: 12px;
@@ -1417,12 +1436,13 @@ footer a:hover {
     font-weight: bold;
     font-size: 1rem;
     letter-spacing: 1px;
-    transition: 0.3s ease;
     border: none;
+    transition: all 0.3s ease;
 }
 
 .btn-veille:hover {
     background: #000000 !important;
+    letter-spacing: 2px;
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
