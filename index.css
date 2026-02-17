@@ -1317,12 +1317,11 @@ footer a:hover {
     transform-origin: bottom left;
 }
 
-/* L'animation de la boîte blanche au survol */
 .content-box {
-    transition: all 0.3s ease-in-out; /* Fluidité de l'animation */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .content-box:hover {
-    transform: translateY(-10px); /* La boîte monte de 10px */
-    box-shadow: 0 15px 30px rgba(0, 119, 181, 0.4); /* Ombre bleue qui s'accentue */
+    transform: translateY(-10px); /* La boîte monte */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Ombre noire standard plus profonde */
 }
