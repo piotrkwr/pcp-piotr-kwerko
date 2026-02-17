@@ -1338,3 +1338,102 @@ footer a:hover {
     transform: translateY(-10px); /* La carte monte */
     box-shadow: 0 20px 40px rgba(0,0,0,0.2); /* L'ombre devient plus profonde */
 }
+
+/* --- SECTION VEILLE PREVIEW (INDEX) --- */
+
+#veille-preview {
+    padding: 100px 0;
+}
+
+.veille-preview-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.6);
+}
+
+.veille-preview-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 25px 60px rgba(15, 5, 107, 0.4); /* Halo bleu au survol */
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.preview-header span {
+    font-size: 2.5rem;
+}
+
+.preview-header h3 {
+    margin: 0;
+    font-family: 'Tektur', sans-serif;
+    color: #0f056b;
+    font-size: 1.8rem;
+}
+
+.veille-preview-card p {
+    color: #444;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    max-width: 650px;
+    margin-bottom: 25px;
+}
+
+/* Tags de thématiques */
+.topics-tags {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+
+.tag {
+    background: #f0f7ff;
+    color: #0f056b;
+    padding: 6px 15px;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: 1px solid #0f056b;
+    transition: 0.3s;
+}
+
+.tag:hover {
+    background: #0f056b;
+    color: #fff;
+}
+
+/* Bouton d'action */
+.btn-veille {
+    display: inline-block;
+    background: #0f056b;
+    color: #ffffff !important;
+    padding: 15px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Tektur', sans-serif;
+    letter-spacing: 1px;
+    transition: 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.btn-veille:hover {
+    background: transparent;
+    border-color: #0f056b;
+    color: #0f056b !important;
+    transform: scale(1.05);
+}
