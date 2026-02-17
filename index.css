@@ -1383,57 +1383,78 @@ footer a:hover {
     font-size: 1.8rem;
 }
 
+/* Style pour la carte de présentation de la veille */
+.veille-preview-card {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    border-bottom: 5px solid #0f056b;
+}
+
+.veille-preview-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(15, 5, 107, 0.3);
+}
+
+.preview-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.preview-icon {
+    font-size: 2.5rem;
+}
+
+.preview-header h3 {
+    margin: 0;
+    color: #0f056b;
+    font-family: 'Tektur', sans-serif;
+    font-size: 1.8rem;
+}
+
 .veille-preview-card p {
-    color: #444;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    max-width: 650px;
+    color: #333;
+    line-height: 1.6;
     margin-bottom: 25px;
 }
 
-/* Tags de thématiques */
 .topics-tags {
     display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 35px;
+    gap: 10px;
+    margin-bottom: 30px;
 }
 
 .tag {
     background: #f0f7ff;
     color: #0f056b;
-    padding: 6px 15px;
-    border-radius: 50px;
-    font-size: 0.9rem;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
     font-weight: bold;
     border: 1px solid #0f056b;
-    transition: 0.3s;
 }
 
-.tag:hover {
-    background: #0f056b;
-    color: #fff;
-}
-
-/* Bouton d'action */
 .btn-veille {
     display: inline-block;
     background: #0f056b;
-    color: #ffffff !important;
-    padding: 15px 35px;
-    border-radius: 10px;
+    color: #fff !important;
+    padding: 12px 30px;
+    border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
-    font-family: 'Tektur', sans-serif;
-    letter-spacing: 1px;
-    transition: 0.3s ease;
-    border: 2px solid transparent;
+    transition: 0.3s;
 }
 
 .btn-veille:hover {
-    background: transparent;
-    border-color: #0f056b;
-    color: #0f056b !important;
+    background: #0077b5;
     transform: scale(1.05);
 }
