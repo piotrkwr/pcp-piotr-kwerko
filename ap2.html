@@ -3,60 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AP 2 - Sécurisation Réseau</title>
+    <title>AP 2 - Sécurité & Firewall - Piotr Kwerko</title>
     <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="stage-details-page">
     <canvas id="particleCanvas"></canvas>
 
-    <div class="container">
-        <h2 class="section-title">Atelier Pro n°2</h2>
-
-        <div class="veille-preview-card">
-            <div class="preview-content" style="text-align: left;">
-                <div class="preview-header">
-                    <span class="preview-icon">🛡️</span>
-                    <h3>Segmentation Réseau et Pare-feu pfSense</h3>
+    <section class="section stage-detail-container">
+        <div class="container">
+            <div class="content-box stage-card-highlight" style="background: #ffffff !important; color: #000000 !important; padding: 40px; border-radius: 15px; box-shadow: 0 15px 45px rgba(0,0,0,0.2);">
+                
+                <div class="header-stage-container" style="margin-bottom: 40px; border-bottom: 2px solid #f0f0f0; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center;">
+                    <div class="header-text-group">
+                        <h2 class="title-main" style="color: #000000 !important; font-size: 2.8rem; margin-bottom: 10px;">Atelier Pro n°2</h2>
+                        <p class="date-sub" style="color: #666666 !important; font-size: 1.2rem;">Cyber-sécurité & Réseaux</p>
+                    </div>
+                    <div class="header-logo-wrapper">
+                        <span style="font-size: 3.5rem;">🛡️</span>
+                    </div>
                 </div>
 
-                <div class="project-details">
-                    <p><strong>Contexte :</strong> Sécurisation d'une infrastructure via la segmentation par VLANs et mise en place d'un Firewall.</p>
-                    
-                    <p><strong>Missions réalisées :</strong></p>
-                    <ul>
-                        <li>Configuration de VLANs sur commutateurs Cisco (VLAN DATA, VOIP, GESTION).</li>
-                        <li>Installation et paramétrage d'un pare-feu pfSense.</li>
-                        <li>Mise en place de règles de filtrage (ACL) et translation d'adresses (NAT).</li>
-                        <li>Configuration d'un serveur VPN pour accès distant sécurisé.</li>
+                <div class="stage-full-description">
+                    <h3 style="color: #0f056b !important; margin-bottom: 15px;">Description du projet :</h3>
+                    <p style="line-height: 1.6; font-size: 1.1rem; margin-bottom: 20px; color: #000000 !important;">
+                        Sécurisation d'une infrastructure réseau via un pare-feu pfSense et segmentation VLAN.
+                    </p>
+
+                    <h3 style="color: #0f056b !important; margin-bottom: 15px;">Missions réalisées :</h3>
+                    <ul style="list-style: none; padding-left: 0; margin-bottom: 30px;">
+                        <li style="margin-bottom: 10px;"><strong>• Firewall :</strong> Mise en place de règles de filtrage (ACL) sur pfSense.</li>
+                        <li style="margin-bottom: 10px;"><strong>• VLAN :</strong> Segmentation du réseau pour isoler les flux.</li>
+                        <li style="margin-bottom: 10px;"><strong>• VPN :</strong> Configuration d'un accès distant sécurisé.</li>
                     </ul>
-                </div>
 
-                <div class="ap-gallery">
-                    <h4 style="color: #0f056b; margin-bottom: 15px; font-family: 'Quantico';">Captures d'écran :</h4>
-                    <div class="gallery-grid">
-                        <div class="gallery-item">
-                            <img src="img/ap2-pfsense.png" alt="Interface pfSense">
-                            <p>Dashboard pfSense</p>
-                        </div>
-                        <div class="gallery-item">
-                            <img src="img/ap2-vlan.png" alt="Schéma VLAN">
-                            <p>Schéma de segmentation réseau</p>
+                    <div class="gallery-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
+                        <div class="gallery-item" style="background: #f8f9fa; padding: 10px; border-radius: 10px; border: 1px solid #ddd; text-align: center;">
+                            <img src="images/ap2-pfsense.png" alt="pfSense" style="width: 100%; border-radius: 5px;">
+                            <p style="margin-top: 10px; font-weight: bold;">Console pfSense</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="topics-tags" style="justify-content: flex-start; margin-top: 30px;">
-                    <span class="tag">#pfSense</span>
-                    <span class="tag">#Cisco</span>
-                    <span class="tag">#CyberSécurité</span>
+                <div class="hero-cta" style="margin-top: 50px; text-align: center;">
+                    <a href="index.html" class="cta-button" style="background: #0f056b; color: white; padding: 15px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; display: inline-block;">← Retour à l'accueil</a>
                 </div>
             </div>
-
-            <div class="preview-action">
-                <a href="index.html" class="btn-veille">RETOUR À L'ACCUEIL</a>
-            </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </section>
+
+    <script src="index.js"></script>
 </body>
 </html>
