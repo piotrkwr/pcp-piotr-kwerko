@@ -1446,3 +1446,73 @@ footer a:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
+
+/* --- PAGES AP (PROJETS) --- */
+
+.project-details {
+    margin-top: 25px;
+}
+
+.project-details p {
+    margin-bottom: 15px !important;
+    text-align: left !important;
+}
+
+.project-details ul {
+    padding-left: 20px;
+    margin-bottom: 25px;
+    list-style: square;
+}
+
+.project-details li {
+    color: #444;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+/* Galerie d'images */
+.ap-gallery {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 2px solid #f0f0f0;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gallery-item {
+    background: #fdfdfd;
+    padding: 12px;
+    border-radius: 15px;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+    filter: grayscale(20%);
+    transition: 0.3s;
+}
+
+.gallery-item p {
+    font-size: 0.9rem !important;
+    font-weight: bold;
+    color: #0f056b !important;
+    margin-top: 10px !important;
+}
+
+/* Animation Galerie */
+.gallery-item:hover {
+    transform: translateY(-5px);
+    border-color: #0f056b;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover img {
+    filter: grayscale(0%);
+}
