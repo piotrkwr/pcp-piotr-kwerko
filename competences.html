@@ -1,333 +1,195 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Compétences - Piotr Kwerko</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    .competences-wrapper {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 3rem 1.5rem;
-    }
- 
-    .competences-wrapper h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
- 
-    .competences-wrapper .intro {
-      color: #666;
-      margin-bottom: 3rem;
-      font-size: 1rem;
-    }
- 
-    .comp-section {
-      margin-bottom: 3rem;
-    }
- 
-    .section-header {
-      display: flex;
-      align-items: center;
-      gap: 14px;
-      margin-bottom: 1.25rem;
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #e5e7eb;
-    }
- 
-    .section-icon {
-      width: 42px;
-      height: 42px;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      flex-shrink: 0;
-    }
- 
-    .icon-b1 { background: #dbeafe; color: #1d4ed8; }
-    .icon-b2 { background: #d1fae5; color: #065f46; }
-    .icon-b3 { background: #fee2e2; color: #991b1b; }
- 
-    .section-title {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin: 0 0 3px;
-      color: #111;
-    }
- 
-    .section-sub {
-      font-size: 0.8rem;
-      color: #888;
-      margin: 0;
-    }
- 
-    .comp-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 10px;
-    }
- 
-    .comp-card {
-      background: #fff;
-      border: 1px solid #e5e7eb;
-      border-radius: 10px;
-      padding: 14px 16px;
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
- 
-    .comp-card:hover {
-      border-color: #c7d2fe;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
- 
-    .comp-badge {
-      font-size: 11px;
-      font-weight: 600;
-      padding: 3px 9px;
-      border-radius: 20px;
-      flex-shrink: 0;
-      margin-top: 2px;
-      letter-spacing: 0.03em;
-    }
- 
-    .badge-b1 { background: #dbeafe; color: #1d4ed8; }
-    .badge-b2 { background: #d1fae5; color: #065f46; }
-    .badge-b3 { background: #fee2e2; color: #991b1b; }
- 
-    .comp-label {
-      font-size: 0.875rem;
-      color: #374151;
-      line-height: 1.5;
-    }
- 
-    /* Séparateur entre blocs techniques et référentiel */
-    .divider {
-      border: none;
-      border-top: 1px solid #e5e7eb;
-      margin: 3rem 0;
-    }
- 
-    /* Section compétences techniques existantes */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
-    }
- 
-    .skill-block h3 {
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #888;
-      margin: 0 0 0.75rem;
-    }
- 
-    .skill-block ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
- 
-    .skill-block ul li {
-      font-size: 0.875rem;
-      color: #374151;
-      padding: 5px 0;
-      border-bottom: 1px solid #f3f4f6;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
- 
-    .skill-block ul li::before {
-      content: "›";
-      color: #9ca3af;
-      font-size: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences - Piotr Kwerko</title>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/png" href="images/logo1_pk.png">
+    <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&family=Tektur:wght@400..900&display=swap" rel="stylesheet">
+    
+    <style>
+        body { margin: 0; padding: 0; background-color: #000; color: #333; }
+        #particleCanvas { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; }
+
+        .main-container {
+            max-width: 1100px;
+            margin: 140px auto 80px;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 { 
+            font-family: 'Quantico', sans-serif; 
+            color: #fff; 
+            text-align: center; 
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Grille des catégories */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        /* Style des cartes (comme pour la veille) */
+        .skill-card {
+            background: #ffffff;
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            font-family: 'Quantico', sans-serif;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.4);
+        }
+
+        .skill-card h2 {
+            font-family: 'Quantico', sans-serif;
+            color: #0f056b;
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #0f056b;
+            padding-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .skill-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-size: 1.05rem;
+        }
+
+        .skill-list li:last-child { border-bottom: none; }
+
+        .skill-list li::before {
+            content: "▹";
+            color: #0f056b;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+
+        .icon-box { font-size: 1.8rem; }
+    </style>
 </head>
 <body>
- 
-  <nav>
-    <a href="index.html" class="logo">PK</a>
-    <ul>
-      <li><a href="index.html#presentation">Présentation</a></li>
-      <li><a href="index.html#cv">CV</a></li>
-      <li>
-        <a href="index.html#stages">Stages</a>
-        <ul>
-          <li><a href="stage1.html">Stage 1</a></li>
-          <li><a href="stage2.html">Stage 2</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#ap">Projets en AP</a>
-        <ul>
-          <li><a href="ap1.html">AP 1</a></li>
-          <li><a href="ap2.html">AP 2</a></li>
-        </ul>
-      </li>
-      <li><a href="veille.html">Veille</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="synthese.html">Tableau de synthèse E5</a></li>
-    </ul>
-  </nav>
- 
-  <main class="competences-wrapper">
- 
-    <h1>Mes Compétences SISR</h1>
-    <p class="intro">Référentiel BTS SIO — Option SISR · 3 blocs · 14 compétences</p>
- 
-    <!-- BLOC 1 -->
-    <div class="comp-section">
-      <div class="section-header">
-        <div class="section-icon icon-b1">🖥️</div>
-        <div>
-          <p class="section-title">Bloc 1 — Support et mise à disposition de services informatiques</p>
-          <p class="section-sub">6 compétences</p>
+    <canvas id="particleCanvas"></canvas>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo-link" style="text-decoration: none;">
+                <div class="logo">
+                    <span class="logo-text">PK</span>
+                    <span class="logo-dot"></span>
+                </div>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html#presentation" class="nav-link">Présentation</a></li>
+                <li><a href="index.html#cv" class="nav-link">CV</a></li>
+                <li class="dropdown">
+                    <a href="index.html#stages" class="nav-link dropbtn">Stages</a>
+                    <ul class="dropdown-content">
+                        <li><a href="stage1.html">Stage 1</a></li>
+                        <li><a href="stage2.html">Stage 2</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#ap" class="nav-link dropbtn">Projets en AP</a>
+                    <ul class="dropdown-content">
+                        <li><a href="ap1.html">AP 1</a></li>
+                        <li><a href="ap2.html">AP 2</a></li>
+                    </ul>
+                </li>
+                <li><a href="veille.html" class="nav-link active">Veille</a></li>
+                <li><a href="competences.html" class="nav-link active">Compétences</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.1</span>
-          <span class="comp-label">Gérer le patrimoine informatique</span>
+    </nav>
+
+    <div class="main-container">
+        <h1>Mes Compétences SISR</h1>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h2><span class="icon-box">🖥️</span> Systèmes & Réseaux</h2>
+                <ul class="skill-list">
+                    <li>Windows Server (AD, DNS, DHCP)</li>
+                    <li>Linux (Debian, Ubuntu)</li>
+                    <li>Configuration réseau (VLAN, Routage)</li>
+                    <li>Active Directory & GPO</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h2><span class="icon-box">🛡️</span> Sécurité</h2>
+                <ul class="skill-list">
+                    <li>Firewall (pfSense, Iptables)</li>
+                    <li>Configuration VPN</li>
+                    <li>Analyse de risques informatique</li>
+                    <li>Surveillance réseau (SNMP, Logs)</li>
+                </ul>
+            </div>
+
+            <div class="skill-card">
+                <h2><span class="icon-box">🛠️</span> Outils & Technologies</h2>
+                <ul class="skill-list">
+                    <li>Virtualisation (VMware, Hyper-V)</li>
+                    <li>Scripting (PowerShell, Bash)</li>
+                    <li>Docker & Conteneurisation</li>
+                    <li>Git & Gestion de version</li>
+                    <li>Proxmox VE</li>
+                </ul>
+            </div>
         </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.2</span>
-          <span class="comp-label">Répondre aux incidents et aux demandes d'assistance et d'évolution</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.3</span>
-          <span class="comp-label">Développer la présence en ligne de l'organisation</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.4</span>
-          <span class="comp-label">Travailler en mode projet</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.5</span>
-          <span class="comp-label">Mettre à disposition des utilisateurs un service informatique</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b1">B1.6</span>
-          <span class="comp-label">Organiser son développement professionnel</span>
-        </div>
-      </div>
     </div>
- 
-    <!-- BLOC 2 -->
-    <div class="comp-section">
-      <div class="section-header">
-        <div class="section-icon icon-b2">🌐</div>
-        <div>
-          <p class="section-title">Bloc 2 — Administration des systèmes et des réseaux</p>
-          <p class="section-sub">3 compétences</p>
+
+     <footer class="footer" style="background-color: #000000; color: #ffffff; padding: 20px 40px; font-family: 'Quantico', sans-serif;">
+    <div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
+
+        <div style="flex: 1; text-align: left;">
+            <p style="margin: 0;">&copy; 2026 Piotr Kwerko - BTS SIO SISR</p>
         </div>
-      </div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <span class="comp-badge badge-b2">B2.1</span>
-          <span class="comp-label">Concevoir une solution d'infrastructure réseau</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b2">B2.2</span>
-          <span class="comp-label">Installer, tester et déployer une solution d'infrastructure réseau</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b2">B2.3</span>
-          <span class="comp-label">Exploiter, dépanner et superviser une solution d'infrastructure réseau</span>
-        </div>
-      </div>
-    </div>
- 
-    <!-- BLOC 3 -->
-    <div class="comp-section">
-      <div class="section-header">
-        <div class="section-icon icon-b3">🛡️</div>
-        <div>
-          <p class="section-title">Bloc 3 — Cybersécurité des services informatiques</p>
-          <p class="section-sub">5 compétences</p>
-        </div>
-      </div>
-      <div class="comp-grid">
-        <div class="comp-card">
-          <span class="comp-badge badge-b3">B3.1</span>
-          <span class="comp-label">Protéger les données à caractère personnel</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b3">B3.2</span>
-          <span class="comp-label">Préserver l'identité numérique de l'organisation</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b3">B3.3</span>
-          <span class="comp-label">Sécuriser les équipements et les usages des utilisateurs</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b3">B3.4</span>
-          <span class="comp-label">Garantir la disponibilité, l'intégrité et la confidentialité des services informatiques et des données de l'organisation face à des cyberattaques</span>
-        </div>
-        <div class="comp-card">
-          <span class="comp-badge badge-b3">B3.5</span>
-          <span class="comp-label">Assurer la cybersécurité d'une infrastructure réseau, d'un système, d'un service</span>
-        </div>
-      </div>
-    </div>
- 
-    <hr class="divider" />
- 
-    <!-- Compétences techniques -->
-    <h2 style="font-size:1.1rem; font-weight:600; margin-bottom:0.25rem;">Compétences techniques</h2>
-    <p style="color:#888; font-size:0.85rem; margin-bottom:1.5rem;">Outils et technologies maîtrisés</p>
- 
-    <div class="skills-grid">
-      <div class="skill-block">
-        <h3>🖥️ Systèmes &amp; Réseaux</h3>
-        <ul>
-          <li>Windows Server (AD, DNS, DHCP)</li>
-          <li>Linux (Debian, Ubuntu)</li>
-          <li>Configuration réseau (VLAN, Routage)</li>
-          <li>Active Directory &amp; GPO</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>🛡️ Sécurité</h3>
-        <ul>
-          <li>Firewall (pfSense, Iptables)</li>
-          <li>Configuration VPN</li>
-          <li>Analyse de risques informatique</li>
-          <li>Surveillance réseau (SNMP, Logs)</li>
-        </ul>
-      </div>
-      <div class="skill-block">
-        <h3>🛠️ Outils &amp; Technologies</h3>
-        <ul>
-          <li>Virtualisation (VMware, Hyper-V)</li>
-          <li>Scripting (PowerShell, Bash)</li>
-          <li>Docker &amp; Conteneurisation</li>
-          <li>Git &amp; Gestion de version</li>
-          <li>Proxmox VE</li>
-        </ul>
-      </div>
-    </div>
- 
-  </main>
- 
-  <footer>
-    <p>© 2026 Piotr Kwerko - BTS SIO SISR</p>
-    <div class="footer-links">
-      <a href="https://linkedin.com/in/piotr-kwerko-5071b133b/" target="_blank">LinkedIn</a>
-      <a href="https://github.com/piotrkwr" target="_blank">GitHub</a>
-      <a href="mailto:kwerpiotr@gmail.com">Email</a>
-      <a href="tel:+33641105664">06 41 10 56 64</a>
-    </div>
-    <a href="mentions-legales.html">Mentions légales</a>
-  </footer>
- 
+
+<div style="flex: 1; display: flex; justify-content: center; gap: 15px;">
+    <a href="https://linkedin.com/in/piotr-kwerko-5071b133b/" target="_blank" style="background: #0077b5; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-family: 'Quantico', sans-serif;">
+        LinkedIn
+    </a>
+
+    <a href="https://github.com/piotrkwr" target="_blank" style="background: #333; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-family: 'Quantico', sans-serif;">
+        GitHub
+    </a>
+
+    <a href="mailto:kwerpiotr@gmail.com" style="background: #444; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-family: 'Quantico', sans-serif;">
+        Email
+    </a>
+
+    <a href="tel:+33641105664" style="background: #25D366; color: white !important; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-size: 0.9rem; font-family: 'Quantico', sans-serif;">
+        06 41 10 56 64
+    </a>
+</div>
+        <div style="flex: 1; text-align: right;">
+    <a href="mentions-legales.html" style="color: white !important; text-decoration: none; font-size: 0.9rem; opacity: 0.8; transition: 0.3s;">Mentions légales</a>
+</div>
+
+    <script src="index.js"></script>
 </body>
 </html>
