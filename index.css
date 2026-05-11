@@ -1516,3 +1516,77 @@ footer a:hover {
 .gallery-item:hover img {
     filter: grayscale(0%);
 }
+
+/* --- PAGE COMPETENCES SISR --- */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* On réutilise le style de ta "veille-preview-card" mais adapté aux listes */
+.skill-card {
+    background: #ffffff !important;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.1);
+    border-bottom: 8px solid #0f056b; /* Rappel de ta couleur accent */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.skill-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 60px rgba(15, 5, 107, 0.2);
+}
+
+.skill-card h2 {
+    font-family: 'Tektur', sans-serif;
+    color: #0f056b;
+    font-size: 1.4rem;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.skill-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skill-list li {
+    padding: 12px 0;
+    color: #444;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    display: flex;
+    align-items: flex-start; /* Aligne le prompt en haut si le texte fait 2 lignes */
+    transition: all 0.3s ease;
+}
+
+/* Le petit détail qui fait "SISR" : un prompt de terminal */
+.skill-list li::before {
+    content: ">_";
+    font-family: 'Courier New', monospace;
+    color: #0f056b;
+    font-weight: bold;
+    margin-right: 12px;
+    flex-shrink: 0;
+}
+
+.skill-list li:hover {
+    color: #000;
+    transform: translateX(8px);
+}
+
+/* Animation spécifique pour les icônes dans les titres */
+.icon-box {
+    font-size: 1.8rem;
+    filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
+}
