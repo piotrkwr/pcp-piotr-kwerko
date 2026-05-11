@@ -1590,3 +1590,42 @@ footer a:hover {
     font-size: 1.8rem;
     filter: drop-shadow(0 4px 4px rgba(0,0,0,0.1));
 }
+
+<style>
+    /* Force le style si le fichier CSS externe ne charge pas */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+    }
+    .skill-card {
+        background: white;
+        border-radius: 15px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        border-left: 8px solid #0f056b; /* La barre bleue SISR */
+        margin-bottom: 20px;
+    }
+    .skill-card h2 {
+        font-family: 'Tektur', sans-serif;
+        color: #0f056b;
+        margin-top: 0;
+    }
+    .skill-list {
+        list-style: none;
+        padding: 0;
+    }
+    .skill-list li {
+        font-family: 'Quantico', sans-serif;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+    }
+    .skill-list li::before {
+        content: ">_";
+        color: #0f056b;
+        font-weight: bold;
+        margin-right: 10px;
+    }
+</style>
