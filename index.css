@@ -1629,3 +1629,63 @@ footer a:hover {
         margin-right: 10px;
     }
 </style>
+
+/* Style du Tableau type Référentiel */
+.table-wrapper {
+    margin-top: 30px;
+    overflow-x: auto; /* Pour que ça reste lisible sur mobile */
+}
+
+.skills-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Quantico', sans-serif;
+    font-size: 0.95rem;
+    border: 1px solid #e0e0e0;
+}
+
+/* En-têtes de Blocs */
+.skills-table thead th {
+    background-color: #ffffff;
+    color: #000;
+    text-align: left;
+    padding: 15px 10px;
+    font-family: 'Tektur', sans-serif;
+    font-size: 1.1rem;
+    border-top: 2px solid #0f056b; /* Petite touche bleue SISR */
+    border-bottom: 1px solid #e0e0e0;
+}
+
+/* Lignes du tableau */
+.skills-table tbody tr {
+    transition: background 0.2s;
+}
+
+/* Effet une ligne sur deux (gris clair) */
+.skills-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.skills-table tbody tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+/* Effet au survol */
+.skills-table tbody tr:hover {
+    background-color: #f0f7ff;
+}
+
+/* Cellules */
+.skills-table td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+/* Style spécifique pour les codes B1.1, B2.1, etc. */
+.skills-table td.code {
+    font-weight: bold;
+    color: #0f056b;
+    width: 80px;
+    white-space: nowrap;
+}
